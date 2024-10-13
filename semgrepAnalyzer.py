@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import os
 import subprocess
 import json
@@ -21,6 +22,8 @@ ADDITIONAL_ASCII_ART = """
                    ._.'         |                             ;             
                                 '                          `-'               
 """
+
+
 
 def display_blinking_box(text):
     width = len(text) + 4  # Calculate the width of the box
