@@ -25,3 +25,19 @@ cd .. && rm -rf SemgrepAnalyzer
 ![image](https://github.com/user-attachments/assets/37516877-89df-426a-84ee-0c04a17546b6)
 
 
+## Aditional 
+
+```bash
+# install through pip
+python3 -m pip install semgrep
+
+# confirm installation succeeded by printing the currently installed version
+semgrep --version
+
+# Login
+semgrep login
+
+# Run scan
+semgrep ci
+
+semgrep scan --config auto 
