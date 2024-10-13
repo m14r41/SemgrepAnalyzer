@@ -11,7 +11,6 @@ YELLOW = '\033[1;33m'
 RED = '\033[0;31m'
 NC = '\033[0m'  # No Color
 
-
 # Additional ASCII art
 ASCII_ART = """
  .-.                                     .               .                  
@@ -22,8 +21,6 @@ ASCII_ART = """
                    ._.'         |                             ;             
                                 '                          `-'               
 """
-
-
 
 def display_blinking_box(text):
     width = len(text) + 4  # Calculate the width of the box
@@ -38,7 +35,6 @@ def display_blinking_box(text):
 def run_semgrep(option, output_folder):
     os.makedirs(output_folder, exist_ok=True)
     current_folder_name = os.path.basename(os.getcwd())  # Get the current folder name
-    custom_command_success = False  # Flag to track success of the custom command
 
     if option == "1":
         print(f"{YELLOW}Running Semgrep option 1...{NC}")
@@ -56,9 +52,7 @@ def run_semgrep(option, output_folder):
         custom_command = input(f"{CYAN}Enter custom Semgrep command: {NC}")
         if "semgrep" in custom_command:  # Check if the command includes "semgrep"
             result = subprocess.run(custom_command, shell=True)
-            if result.returncode == 0:  # Check if the command ran successfully
-                custom_command_success = True  # Set the flag if successful
-            else:
+            if result.returncode != 0:  # Check if the command ran successfully
                 print(f"{RED}Error: Custom Semgrep command failed.{NC}")  # Error message for command failure
         else:
             print(f"{RED}Error: Please enter a valid Semgrep command.{NC}")  # Error message for invalid command
@@ -68,9 +62,6 @@ def run_semgrep(option, output_folder):
             run_semgrep(str(idx), output_folder)
     else:
         print(f"{RED}Invalid option. Please enter 1, 2, 3, 4, 5, or all.{NC}")
-        return
-
-    return custom_command_success  # Return the success flag
 
 def generate_html(output_folder):
     for filename in os.listdir(output_folder):
@@ -113,14 +104,10 @@ def main():
     option = input(f"{RED}Enter the option:\n{NC}")
     
     output_folder = "SemgrepOutput"
-    custom_command_success = run_semgrep(option, output_folder)
-
-    # Only generate HTML if a custom command ran successfully
-    if custom_command_success:
-        generate_html(output_folder)
+    run_semgrep(option, output_folder)
+    generate_html(output_folder)  # Generate HTML for all outputs
 
     print(f"{GREEN}All Semgrep scans completed!{NC}")
 
 if __name__ == "__main__":
     main()
-
