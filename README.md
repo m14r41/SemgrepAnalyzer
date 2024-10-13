@@ -17,3 +17,11 @@ cd .. && rm -rf SemgrepAnalyzer
 ```
 
 
+---
+
+## Screenshot
+
+![image](https://github.com/user-attachments/assets/45d5063f-0890-439c-9c70-acfaf537736c)
+![image](https://github.com/user-attachments/assets/37516877-89df-426a-84ee-0c04a17546b6)
+
+
