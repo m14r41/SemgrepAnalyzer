@@ -13,7 +13,7 @@ NC = '\033[0m'  # No Color
 
 
 # Additional ASCII art
-ADDITIONAL_ASCII_ART = """
+ASCII_ART = """
  .-.                                     .               .                  
 (   )                                   / \\              |                  
  `-.  .-. .--.--.  .-...--. .-. .,-.   /___\\  .--.  .-.  | .  .---. .-. .--.
@@ -97,6 +97,7 @@ def generate_html(output_folder):
             print(f"{GREEN}Generated HTML file: {html_file_name}{NC}")
 
 def main():
+  print(ASCII_ART)  # Display the main ASCII art
     print(f"{GREEN}Welcome to the SemgrepAnalyzer!{NC}")
 
     # Display options and descriptions
