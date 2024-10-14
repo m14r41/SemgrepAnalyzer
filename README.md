@@ -20,7 +20,7 @@ cd .. && rm -rf SemgrepAnalyzer
 ---
 
 ## Screenshot
-![image](https://github.com/user-attachments/assets/4a6e4c3e-fba8-4b99-b6c4-bfb0a2f75c48)
+![image](https://github.com/user-attachments/assets/3cae423d-2203-4334-a616-f370703dc2cc)
 ![image](https://github.com/user-attachments/assets/e6afb766-e42a-468a-9068-33a8acea5fe0)
 ![image](https://github.com/user-attachments/assets/6474b0c6-dbf9-4fc0-80c7-a12e01c15889)
 
