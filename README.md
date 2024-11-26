@@ -2,7 +2,7 @@
 SemgrepAnalyzer is a powerful and user-friendly tool designed for static code analysis using Semgrep by generating output in HTML. It enables developers and security professionals to scan codebases for vulnerabilities and code issues efficiently.
 
 ## Setup tool
-
+ 
 ```bash
 git clone https://github.com/m14r41/SemgrepAnalyzer.git
 
